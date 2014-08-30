@@ -130,6 +130,12 @@ h6 {
    background-color:#000000;
 }
 
+.bk-color-contact-green {
+   background-color:#4BAC85;
+}
+
+
+
 .margin-5 {
     margin:5px;
 }
@@ -213,10 +219,9 @@ a:focus {
     border-radius:0px;
 }
 
-
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    background-color:#207A0F;
-    border-color:#207A0F;
+    background-color:#15355C;
+    border-color:#15355C;
 }
 .navbar-default .navbar-brand {
   margin-left: 30px;
@@ -228,8 +233,8 @@ color:#FFFFFF;
  
 }
 .navbar-default {
-     background-color:#207A0F;
-    border-color:#207A0F;
+     background-color:#15355C;
+    border-color:#15355C;
 }
 
 .navbar-default:hover .navbar-brand:hover {
@@ -344,7 +349,7 @@ color: #fff;
 #slide-head {
   padding: 100px 0px 50px 0px;
 color: #022406;
-background-color: rgb(19, 170, 74);
+background-color: #1c4474;
 }
 #slide-head .prev,
 #slide-head .next {
@@ -549,7 +554,7 @@ background-color: rgb(19, 170, 74);
 
 #footer {
     padding:20px;
-    background-color:rgb(19, 170, 74);
+    background-color:#15355C;
     text-align:right;
     padding-right:50px;
     color:white;
