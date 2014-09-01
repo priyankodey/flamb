@@ -48,7 +48,7 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav flot-nav">
-                    <li><a href="#slide-head"><i class="fa fa-home color-red"></i> Home</a></li>
+                    <li><a href="#home"><i class="fa fa-home color-red"></i> Home</a></li>
                     <li><a href="#about-section"><i class="fa fa-group color-brown"></i> About Us</a></li>
                     <li><a href="#services-section"><i class="fa fa-gear color-green"></i> Services</a></li>
                     <li><a href="#technologies-section"><i class="fa fa-plane color-blue"></i> Technologies</a></li>
@@ -61,33 +61,56 @@
     <!--END NAV SECTION -->
     <!--SLIDE CAROUSEL SECTION -->
 
-    <section id="slide-head" class="carousel">
-        <div >
+     <section id="home" name="home"> 
+
+<div id="home_carousel">
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
- 
+  <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
     
   </ol>
 
-  
+  <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-        <div >
+        <div id="h_bg">
+            <div class="carousel-caption">
+                <div class="col-sm-12 callout">
+                    
+                </div>
+            </div>
+                    <img class="img-responsive" src="/assets/home_b1.jpg" alt="Background" width="100%" height="615px">      
+        </div>
+    </div>
+    <div class="item" id="carou_cap2">
+        <div id="h_bg">
+            <div class="carousel-caption">
+                <div class="col-sm-12 callout">
+                   
+                </div>
+            </div>
+                    <img class="img-responsive" src="/assets/home_b2.jpg" alt="Background" width="100%" height="615px">      
+        </div>
+    </div>
+
+    <div class="item">
+        <div id="h_bg">
       <img class="img-responsive" src="/assets/home_b1.jpg" alt="Background" width="100%" height="615px">
-  </div>
+        </div>
     </div>
     <div class="item">
-        <div >
+        <div id="h_bg">
       <img class="img-responsive" src="/assets/home_b2.jpg" alt="Background" width="100%" height="615px">
-  </div>
+        </div>
     </div>
     
   </div>
 
-  
+  <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
   </a>
@@ -96,9 +119,8 @@
   </a>
 </div>
 </div>
-        <a class="prev" href="#slide-head" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-        <a class="next" href="#slide-head" data-slide="next"><i class="fa fa-angle-right"></i></a>
-    </section>
+<!-- Carousel end -->
+</section>
 
     
     <!--END SLIDE CAROUSEL SECTION -->
