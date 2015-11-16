@@ -400,9 +400,9 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 })( jQuery );
 (function() {
-  var CSRFToken, anchoredLink, assetsChanged, browserCompatibleDocumentParser, browserIsntBuggy, browserSupportsPushState, cacheCurrentPage, changePage, constrainPageCacheTo, createDocument, crossOriginLink, currentState, executeScriptTags, extractLink, extractTitleAndBody, extractTrackAssets, fetchHistory, fetchReplacement, handleClick, ignoreClick, initializeTurbolinks, initialized, installClickHandlerLast, intersection, invalidContent, loadedAssets, noTurbolink, nonHtmlLink, nonStandardClick, pageCache, recallScrollPosition, referer, reflectNewUrl, reflectRedirectedUrl, rememberCurrentState, rememberCurrentUrl, rememberInitialPage, removeHash, removeNoscriptTags, requestMethod, requestMethodIsSafe, resetScrollPosition, targetLink, triggerEvent, visit, xhr, _ref,
-    __hasProp = {}.hasOwnProperty,
-    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+  var CSRFToken, anchoredLink, assetsChanged, browserCompatibleDocumentParser, browserIsntBuggy, browserSupportsPushState, cacheCurrentPage, changePage, constrainPageCacheTo, createDocument, crossOriginLink, currentState, executeScriptTags, extractLink, extractTitleAndBody, extractTrackAssets, fetchHistory, fetchReplacement, handleClick, ignoreClick, initializeTurbolinks, initialized, installClickHandlerLast, intersection, invalidContent, loadedAssets, noTurbolink, nonHtmlLink, nonStandardClick, pageCache, recallScrollPosition, ref, referer, reflectNewUrl, reflectRedirectedUrl, rememberCurrentState, rememberCurrentUrl, rememberInitialPage, removeHash, removeNoscriptTags, requestMethod, requestMethodIsSafe, resetScrollPosition, targetLink, triggerEvent, visit, xhr,
+    hasProp = {}.hasOwnProperty,
+    indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   initialized = false;
 
@@ -416,7 +416,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
   createDocument = null;
 
-  requestMethod = ((_ref = document.cookie.match(/request_method=(\w+)/)) != null ? _ref[1].toUpperCase() : void 0) || '';
+  requestMethod = ((ref = document.cookie.match(/request_method=(\w+)/)) != null ? ref[1].toUpperCase() : void 0) || '';
 
   xhr = null;
 
@@ -501,7 +501,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
   constrainPageCacheTo = function(limit) {
     var key, value;
     for (key in pageCache) {
-      if (!__hasProp.call(pageCache, key)) continue;
+      if (!hasProp.call(pageCache, key)) continue;
       value = pageCache[key];
       if (key <= currentState.position - limit) {
         pageCache[key] = null;
@@ -524,17 +524,17 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
   };
 
   executeScriptTags = function() {
-    var attr, copy, nextSibling, parentNode, script, scripts, _i, _j, _len, _len1, _ref1, _ref2;
+    var attr, copy, i, j, len, len1, nextSibling, parentNode, ref1, ref2, script, scripts;
     scripts = Array.prototype.slice.call(document.body.getElementsByTagName('script'));
-    for (_i = 0, _len = scripts.length; _i < _len; _i++) {
-      script = scripts[_i];
-      if (!((_ref1 = script.type) === '' || _ref1 === 'text/javascript')) {
+    for (i = 0, len = scripts.length; i < len; i++) {
+      script = scripts[i];
+      if (!((ref1 = script.type) === '' || ref1 === 'text/javascript')) {
         continue;
       }
       copy = document.createElement('script');
-      _ref2 = script.attributes;
-      for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
-        attr = _ref2[_j];
+      ref2 = script.attributes;
+      for (j = 0, len1 = ref2.length; j < len1; j++) {
+        attr = ref2[j];
         copy.setAttribute(attr.name, attr.value);
       }
       copy.appendChild(document.createTextNode(script.innerHTML));
@@ -545,10 +545,10 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
   };
 
   removeNoscriptTags = function() {
-    var noscript, noscriptTags, _i, _len;
+    var i, len, noscript, noscriptTags;
     noscriptTags = Array.prototype.slice.call(document.body.getElementsByTagName('noscript'));
-    for (_i = 0, _len = noscriptTags.length; _i < _len; _i++) {
-      noscript = noscriptTags[_i];
+    for (i = 0, len = noscriptTags.length; i < len; i++) {
+      noscript = noscriptTags[i];
       noscript.parentNode.removeChild(noscript);
     }
   };
@@ -620,16 +620,16 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
   };
 
   extractTrackAssets = function(doc) {
-    var node, _i, _len, _ref1, _results;
-    _ref1 = doc.head.childNodes;
-    _results = [];
-    for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-      node = _ref1[_i];
+    var i, len, node, ref1, results;
+    ref1 = doc.head.childNodes;
+    results = [];
+    for (i = 0, len = ref1.length; i < len; i++) {
+      node = ref1[i];
       if ((typeof node.getAttribute === "function" ? node.getAttribute('data-turbolinks-track') : void 0) != null) {
-        _results.push(node.src || node.href);
+        results.push(node.src || node.href);
       }
     }
-    return _results;
+    return results;
   };
 
   assetsChanged = function(doc) {
@@ -640,18 +640,18 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
   };
 
   intersection = function(a, b) {
-    var value, _i, _len, _ref1, _results;
+    var i, len, ref1, results, value;
     if (a.length > b.length) {
-      _ref1 = [b, a], a = _ref1[0], b = _ref1[1];
+      ref1 = [b, a], a = ref1[0], b = ref1[1];
     }
-    _results = [];
-    for (_i = 0, _len = a.length; _i < _len; _i++) {
-      value = a[_i];
-      if (__indexOf.call(b, value) >= 0) {
-        _results.push(value);
+    results = [];
+    for (i = 0, len = a.length; i < len; i++) {
+      value = a[i];
+      if (indexOf.call(b, value) >= 0) {
+        results.push(value);
       }
     }
-    return _results;
+    return results;
   };
 
   extractTitleAndBody = function(doc) {
@@ -681,7 +681,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
   };
 
   browserCompatibleDocumentParser = function() {
-    var createDocumentUsingDOM, createDocumentUsingParser, createDocumentUsingWrite, e, testDoc, _ref1;
+    var createDocumentUsingDOM, createDocumentUsingParser, createDocumentUsingWrite, e, error, ref1, testDoc;
     createDocumentUsingParser = function(html) {
       return (new DOMParser).parseFromString(html, 'text/html');
     };
@@ -704,12 +704,12 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
         testDoc = createDocumentUsingParser('<html><body><p>test');
         return createDocumentUsingParser;
       }
-    } catch (_error) {
-      e = _error;
+    } catch (error) {
+      e = error;
       testDoc = createDocumentUsingDOM('<html><body><p>test');
       return createDocumentUsingDOM;
     } finally {
-      if ((testDoc != null ? (_ref1 = testDoc.body) != null ? _ref1.childNodes.length : void 0 : void 0) !== 1) {
+      if ((testDoc != null ? (ref1 = testDoc.body) != null ? ref1.childNodes.length : void 0 : void 0) !== 1) {
         return createDocumentUsingWrite;
       }
     }
@@ -780,8 +780,8 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
   initializeTurbolinks = function() {
     document.addEventListener('click', installClickHandlerLast, true);
     return window.addEventListener('popstate', function(event) {
-      var _ref1;
-      if ((_ref1 = event.state) != null ? _ref1.turbolinks : void 0) {
+      var ref1;
+      if ((ref1 = event.state) != null ? ref1.turbolinks : void 0) {
         return fetchHistory(event.state);
       }
     }, false);
@@ -2779,12 +2779,12 @@ jQuery(function ($) {
     =====================================================*/
 
     //  HEADER SLIDE /CAROUSEL SECTION FUNCTION 
-	$(function(){
+	/*$(function(){
 		$('#slide-head.carousel').carousel({
 			interval: 2000,
 			pause: false
 		});
-	});
+	});*/
 
 	
 
@@ -3186,6 +3186,10 @@ window.scrollReveal = (function (window) {
 
   return scrollReveal;
 })(window);
+(function() {
+
+
+}).call(this);
 (function() {
 
 
