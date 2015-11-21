@@ -1,6 +1,6 @@
 Flambiance::Application.routes.draw do
   root :to => 'static_pages#index'
-  #match '/', to: 'static_pages#index', via: 'get', as: :index
+  match '/help', to: 'static_pages#help', via: 'get', as: :help
  
 
   resources :users

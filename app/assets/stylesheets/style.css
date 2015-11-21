@@ -1,27 +1,24 @@
-/*=============================================================
-    Authour URI: www.binarytheme.com
-    License: Commons Attribution 3.0
-
-    http://creativecommons.org/licenses/by/3.0/
-
-    100% To use For Personal And Commercial Use.
-    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
-   
-    ========================================================  */
-/*==========================================
-    CUSTOM STYLESHEET FOR TEMPLATE BY BINARYTHEME
-    =====================================================*/
-
-
+@font-face { font-family: Comfortaa; src: url('/assets/fonts/Comfortaa-Bold.ttf'); 
+}
+@font-face { font-family: Comfortaa; src: url('/assets/fonts/Comfortaa-Light.ttf');
+}
+@font-face { font-family: Comfortaa; src: url('/assets/fonts/Comfortaa-Regular.ttf');
+}
+@font-face {font-family: 'AmsiPro-Regular';src: url('/assets/fonts/2E1573_0_0.eot');src: url('/assets/fonts/2E1573_0_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/2E1573_0_0.woff2') format('woff2'),url('/assets/fonts/2E1573_0_0.woff') format('woff'),url('/assets/fonts/2E1573_0_0.ttf') format('truetype');}
+@font-face {font-family: 'AmsiPro-Bold';src: url('/assets/fonts/2E1573_1_0.eot');src: url('/assets/fonts/2E1573_1_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/2E1573_1_0.woff2') format('woff2'),url('/assets/fonts/2E1573_1_0.woff') format('woff'),url('/assets/fonts/2E1573_1_0.ttf') format('truetype');}
+@font-face {font-family: 'AmsiProCond-Bold';src: url('/assets/fonts/2E1573_2_0.eot');src: url('/assets/fonts/2E1573_2_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/2E1573_2_0.woff2') format('woff2'),url('/assets/fonts/2E1573_2_0.woff') format('woff'),url('/assets/fonts/2E1573_2_0.ttf') format('truetype');}
+@font-face {font-family: 'AmsiPro-Italic';src: url('/assets/fonts/2E1573_3_0.eot');src: url('/assets/fonts/2E1573_3_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/2E1573_3_0.woff2') format('woff2'),url('/assets/fonts/2E1573_3_0.woff') format('woff'),url('/assets/fonts/2E1573_3_0.ttf') format('truetype');}
+@font-face {font-family: 'AmsiProCond-Regular';src: url('/assets/fonts/AmsiProCond-Regular.otf');}
 
 /*==========================================
     GENERAL  STYLES
     =====================================================*/
 
 body {
-    font-family:'Open Sans', sans-serif;
+    font-family: 'AmsiPro-Regular','Open Sans', sans-serif;
     font-size:14px;
     font-weight:400;
+    color: rgba(51,51,51,0.77);
   
 }
 
@@ -33,7 +30,7 @@ h5,
 h6 {
   color: #000;
   font-weight: 500;
-    font-family:'Open Sans', sans-serif;
+    font-family: 'Comfortaa','Open Sans', sans-serif;
 }
 
 .flot-nav {
@@ -602,5 +599,26 @@ max-width: 50%;
   position: relative;
 }
 
+.carou-cap3 {
+  padding-bottom: 3em;
+  color: #fff;
+}
 
+.pad-top1 {
+  padding-top: 1em
+}
 
+/* help */
+
+.pad5 {
+  padding: 5em
+}
+
+.inner {
+  color: #fff;
+  background: #0d8acc;
+}
+
+.inner h1, .inner h2 {
+  color: #fff
+}

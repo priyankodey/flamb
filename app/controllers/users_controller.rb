@@ -7,9 +7,9 @@ class UsersController < ApplicationController
         
          UserMailer.welcome_email(@user).deliver
          UserMailer.query_mail(@user).deliver
-
+flash[:notice] = 'Thank you for your message. We will contact you soon!'
+        
         format.html { redirect_to :back }
-        #flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
         format.json { render action: 'show', status: :created, location: @user }
       else
         format.html { render action: 'new' }
